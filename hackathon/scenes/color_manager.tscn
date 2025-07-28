@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4kmdmcriltof"]
+
+[ext_resource type="Script" uid="uid://by5fj3j0jehnu" path="res://scripts/color_manager.gd" id="1_yiots"]
+
+[node name="ColorManager" type="Node" groups=["managers"]]
+script = ExtResource("1_yiots")
