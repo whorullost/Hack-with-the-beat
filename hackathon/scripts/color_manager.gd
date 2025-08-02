@@ -179,6 +179,7 @@ func set_color_strength(strength: float):
 	#Adjusts how much color is revealed in bleed areas (0.0 = no color, 1.0 = full color).
 	if shader_material:
 		shader_material.set_shader_parameter("color_strength", strength)
+		#$"../tiles/Tile".modulate = Color.BLACK
 
 func set_grayscale_strength(strength: float):
 	# (0.0 = no color, 1.0 = full grayscale)
