@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://csevayhi0tpuw"]
+
+[ext_resource type="Script" uid="uid://ceyx0e3gytd72" path="res://scenes/audio_manager.gd" id="1_v6v0x"]
+[ext_resource type="AudioStream" uid="uid://copg2jiywov8" path="res://Song/Metronome  90 BPM  44 Time (with Accent ).mp3" id="2_4tesi"]
+
+[node name="AudioManager" type="Node2D"]
+script = ExtResource("1_v6v0x")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4tesi")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5

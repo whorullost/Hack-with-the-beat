@@ -4,4 +4,7 @@ res://scenes/player.tscn
 res://scenes/tile.tscn
 res://scenes/killzone.tscn
 res://scenes/color_manager.tscn
-res://scripts/color_manager.gd
+res://scenes/audio_stream_player.gd
+res://scripts/tile.gd
+res://scenes/AudioManager.tscn
+res://scenes/audio_manager.gd

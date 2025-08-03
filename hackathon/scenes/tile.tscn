@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ba6a8jf5la74v"]
+[gd_scene load_steps=6 format=3 uid="uid://ba6a8jf5la74v"]
 
 [ext_resource type="Texture2D" uid="uid://dmf170xndj01q" path="res://assets/sprite1.png" id="1_28w20"]
 [ext_resource type="Script" uid="uid://bbq0prpp1vhip" path="res://scripts/tile.gd" id="1_u43x1"]
+[ext_resource type="AudioStream" uid="uid://copg2jiywov8" path="res://Song/Metronome  90 BPM  44 Time (with Accent ).mp3" id="3_jy7pm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u43x1"]
 size = Vector2(16, 9)
@@ -29,3 +30,11 @@ collision_mask = 2
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_wkqs7")
 debug_color = Color(0.650617, 0.424874, 0.777699, 0.42)
+
+[node name="BeatPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jy7pm")
+
+[node name="StopTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

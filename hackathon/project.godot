@@ -15,6 +15,10 @@ run/main_scene="uid://vt3g0hwshlpa"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Old assets/icon.svg"
 
+[autoload]
+
+AudioManager="*res://scenes/AudioManager.tscn"
+
 [input]
 
 jump={

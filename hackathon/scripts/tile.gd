@@ -48,7 +48,7 @@ func _on_player_entered(body: Node2D) -> void:
 		not is_active_trigger and 
 		trigger_cooldown_timer <= 0):
 		
-		is_active_trigger = true
+		is_active_trigger = true 
 		trigger_cooldown_timer = TRIGGER_COOLDOWN_TIME
 		
 		# Apply offset for precise effect positioning
@@ -63,3 +63,31 @@ func _on_player_exited(body: Node2D) -> void:
 	#Reset trigger state when player leaves tile area.
 	if body.is_in_group("player"):
 		is_active_trigger = false
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	AudioManager.play_segment()
+		
+"""
+		
+@onready var beat_player = $BeatPlayer
+@onready var stop_timer = $StopTimer
+
+var playback_position := 0.0
+
+func _ready_music() -> void:
+	stop_timer.connect("timeout", Callable(self, "_on_stop_timer_timeout"))
+		
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if not $BeatPlayer.playing:
+		beat_player.seek(playback_position)
+		beat_player.play()
+		stop_timer.start()
+		
+func _on_stop_timer_timeout() -> void:
+	playback_position = beat_player.get_playback_position()
+	
+	if playback_position >= beat_player.stream.get_length():
+		playback_position - 0.0
+		
+	beat_player.stop()
+"""
